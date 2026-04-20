@@ -15,4 +15,9 @@ public class HomeRestController {
 		String jsessionId = request.getSession().getId();
 		return new ResponseEntity<>("JSESSION_ID: " + jsessionId, HttpStatus.OK);
 	}
+	
+	@GetMapping(path = "/navbar")
+	public ResponseEntity<?> navbarPage() {
+		return new ResponseEntity<>("From NavBar page",HttpStatus.OK);
+	}
 }
